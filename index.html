@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+   <title>Avaliação</title>
+</head>
+<body>
+   <div class="page">
+      <header>
+         <h1>Avalie a sua mentoria</h1>
+         <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+         <img src="images/icon.jpg" alt="imagem decorativa no cabeçalho">
+         <h2>Informações pessoais</h2>
+      </header>
+      <form id="my-form" method="post">
+         <fieldset>
+            <div>
+               <div>
+                  <label for="iname">Nome</label>
+                  <input type="text" id="iname">
+               </div>
+               <div>
+                  <label for="isurname">Sobrenome</label>
+                  <input type="text" id="isurname">
+               </div>
+               <div>
+                  <label for="iemail">Email <span>(Digite um email válido)</span></label>
+                  <input type="email" id="iemail">
+               </div>
+            </div>
+         </fieldset>
+            
+         <fieldset>
+            <div>
+               <legend>Informações do mentor</legend>
+               <div>
+                  <label for="imentor">Selecione quem foi o seu mentor</label>
+                  <select id="imentor">
+                     <option value="guitar1">Mark Knopfler</option>
+                     <option value="guitar2">Eric Clapton</option>
+                     <option value="guitar3">Gary Moore</option>
+                     <option value="guitar4">David Gilmour</option>
+                     <option value="guitar5">Jeff Beck</option>
+                     <option value="guitar6">Stevie Ray Vaughan</option>
+                  </select>
+               </div>
+               <div>
+                  <label for="ifeedback">Feedback sobre o mentor</label>
+                  <textarea id="ifeedback" cols="30" rows="10"></textarea>
+               </div>
+               <div>
+                  <input type="checkbox" id="iconfirm">
+                  <label for="iconfirm">Todas as minhas dúvidas foram esclarecidas durante a mentoria</label>
+               </div>
+            </div>
+         </fieldset>
+
+         <fieldset>
+            <div>
+               <legend>Agendando próxima mentoria</legend>
+               <div class="scheduling">
+                  <div>
+                     <label for="idate">Data</label>
+                     <input type="date" id="idate">
+                  </div>
+                  <div>
+                     <label for="ibegin">Das</label>
+                     <input type="time" id="ibegin">
+                  </div>
+                  <div>
+                     <label for="iend">Até</label>
+                     <input type="time" id="iend">
+                  </div>
+               </div>
+            </div>
+         </fieldset>
+         <button class="button" form="my-form">
+            Salvar
+         </button>
+      </form>
+      <footer>
+         <p>Desafio desenvolvido durante curso de programação da Rocketseat (trilha Explorer)</p>
+      </footer>
+   </div>
+</body>
+</html>

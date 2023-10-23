@@ -1,0 +1,65 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --white: #ffffff;
+   --decoration: #ed1848;
+   --background: #bfd7e4;
+   --header: #293241;
+}
+
+body {
+   background-color: var(--background);
+   font-size: 14px;
+}
+
+body::before {
+   content: '';
+   width: 100%;
+   height: 465px;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: -1;
+
+   background-color: var(--header);
+}
+
+.page {
+   width: 750px;
+   margin: auto;
+}
+
+img {
+   height: 100px;
+   border-radius: 30%;
+}
+
+header {
+   margin: auto;
+   margin-top: 74px;
+   align-items: center;
+   color: var(--white);
+}
+
+header h1 {
+   font-size: 36px;
+}
+
+header p {
+   font-size: 16px;
+}
+
+body, input, textarea, select {
+   font-family: "Poppins", sans-serif;
+}
+
+
+h1, h2, legend {
+   font-family: "Staatliches", sans-serif;
+   font-weight: lighter;
+}
+
