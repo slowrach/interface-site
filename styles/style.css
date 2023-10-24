@@ -5,6 +5,7 @@
 }
 
 :root {
+   font-size: 62.5%;
    --white: #ffffff;
    --decoration: #ed1848;
    --background: #bfd7e4;
@@ -13,30 +14,30 @@
 
 body {
    background-color: var(--background);
-   font-size: 14px;
+   font-size: 1.4rem;
 }
 
 body::before {
    content: '';
    width: 100%;
-   height: 465px;
+   height: 46.5rem;
    position: absolute;
-   left: 0px;
-   top: 0px;
+   left: 0;
+   top: 0;
    z-index: -1;
 
    background-color: var(--header);
 }
 
 .page {
-   width: 750px;
+   width: 75rem;
    margin: auto;
 }
 
 
 header {
    margin: auto;
-   margin-top: 107px;
+   margin-top: 10.7rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -44,34 +45,37 @@ header {
 }
 
 header h1 {
-   font-size: 36px;
+   font-size: 3.6rem;
+   line-height: 4.5rem;
 }
 
 header p {
-   font-size: 16px;
-   height: 46px;
+   font-size: 1.6rem;
+   line-height: 2.4rem;
+   padding-bottom: 2.2rem;
+   margin-bottom: 2px;
 }
 
 img {
-   height: 100px;
-   border-radius: 10px;
-   margin-top: 2px;
-   margin-bottom: 32px;
+   height: 10rem;
+   border-radius: 1rem;
+   margin-bottom: 3.2rem;
 }
 
 header h2 {
    background-color: var(--decoration);
-   font-size: 24px;
+   font-size: 2.4rem;
    text-align: center;
-   padding: 50px 0px;
-   width: 750px;
-   height: 133px;
-   border-radius: 20px 20px 0 0;
+   padding: 5rem 0;
+   width: 75rem;
+   height: 13.3rem;
+   border-radius: 2rem 2rem 0 0;
 }
 
 form {
    background-color: var(--white);
-
+   height: 107.5rem;
+   border-radius: 0 0 2rem 2rem;
 }
 
 fieldset {
@@ -87,3 +91,55 @@ h1, h2, legend {
    font-weight: lighter;
 }
 
+#my-form {
+   padding: 3.1rem 0 1.8rem 6.4rem;
+}
+
+#my-form input {
+   padding: 1rem;
+   margin-top: 0.8rem;
+   border-radius: 0.8rem;
+   border: 1px solid #e6e6f0;
+   background-color: #fafafc;
+}
+
+#my-form span {
+   color: #c1bccc;
+   font-size: 1.2rem;
+   line-height: 2rem;
+}
+
+#my-form span:hover {
+   color: #737078;
+}
+
+.full-name {
+   display: flex;
+   gap: 2.2rem;
+}
+
+.full-name div {
+   display: flex;
+   flex-direction: column;
+}
+
+.full-name input {
+   width: 30rem;
+}
+
+.email-data {
+   display: flex;
+   flex-direction: column;
+   margin-top: 1.6rem;
+}
+
+.email-data input {
+   width: 62.2rem;
+}
+
+footer {
+   padding: 1.5rem;
+   text-align: center;
+   font-size: 1rem;
+   color: var(--header);
+}

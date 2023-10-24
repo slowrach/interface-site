@@ -20,16 +20,18 @@
       </header>
       <form id="my-form" method="post">
          <fieldset>
-            <div>
-               <div>
-                  <label for="iname">Nome</label>
-                  <input type="text" id="iname">
+            <div class="fieldsets">
+               <div class="full-name">
+                  <div>
+                     <label for="iname">Nome</label>
+                     <input type="text" id="iname">
+                  </div>
+                  <div>
+                     <label for="isurname">Sobrenome</label>
+                     <input type="text" id="isurname">
+                  </div>
                </div>
-               <div>
-                  <label for="isurname">Sobrenome</label>
-                  <input type="text" id="isurname">
-               </div>
-               <div>
+               <div class="email-data">
                   <label for="iemail">Email <span>(Digite um email válido)</span></label>
                   <input type="email" id="iemail">
                </div>
@@ -37,7 +39,7 @@
          </fieldset>
             
          <fieldset>
-            <div>
+            <div class="fieldsets">
                <legend>Informações do mentor</legend>
                <div>
                   <label for="imentor">Selecione quem foi o seu mentor</label>
@@ -62,7 +64,7 @@
          </fieldset>
 
          <fieldset>
-            <div>
+            <div class="fieldsets">
                <legend>Agendando próxima mentoria</legend>
                <div class="scheduling">
                   <div>
@@ -70,7 +72,7 @@
                      <input type="date" id="idate">
                   </div>
                   <div>
-                     <label for="ibegin">Das</label>
+                     <label for="ibegin">Das <span>(DD/MM/AAAA)</span></label>
                      <input type="time" id="ibegin">
                   </div>
                   <div>
