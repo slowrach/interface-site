@@ -24,39 +24,39 @@
                <div class="full-name">
                   <div>
                      <label for="iname">Nome</label>
-                     <input type="text" id="iname">
+                     <input type="text" id="iname" required>
                   </div>
                   <div>
                      <label for="isurname">Sobrenome</label>
-                     <input type="text" id="isurname">
+                     <input type="text" id="isurname" required>
                   </div>
                </div>
                <div class="email-data">
                   <label for="iemail">Email <span>(Digite um email válido)</span></label>
-                  <input type="email" id="iemail">
+                  <input type="email" id="iemail" required>
                </div>
             </div>
          </fieldset>
             
          <fieldset>
-            <div class="fieldsets">
+            <div>
                <legend>Informações do mentor</legend>
-               <div>
+               <div class="mentor-name">
                   <label for="imentor">Selecione quem foi o seu mentor</label>
                   <select id="imentor">
-                     <option value="guitar1">Mark Knopfler</option>
-                     <option value="guitar2">Eric Clapton</option>
-                     <option value="guitar3">Gary Moore</option>
-                     <option value="guitar4">David Gilmour</option>
-                     <option value="guitar5">Jeff Beck</option>
-                     <option value="guitar6">Stevie Ray Vaughan</option>
+                     <option value="guitarist1">Mark Knopfler</option>
+                     <option value="guitarist2">Eric Clapton</option>
+                     <option value="guitarist3">Gary Moore</option>
+                     <option value="guitarist4">David Gilmour</option>
+                     <option value="guitarist5">Jeff Beck</option>
+                     <option value="guitarist6">Stevie Ray Vaughan</option>
                   </select>
                </div>
-               <div>
+               <div class="mentor-feedback">
                   <label for="ifeedback">Feedback sobre o mentor</label>
-                  <textarea id="ifeedback" cols="30" rows="10"></textarea>
+                  <textarea id="ifeedback"></textarea>
                </div>
-               <div>
+               <div class="checkbox">
                   <input type="checkbox" id="iconfirm">
                   <label for="iconfirm">Todas as minhas dúvidas foram esclarecidas durante a mentoria</label>
                </div>
@@ -67,15 +67,15 @@
             <div class="fieldsets">
                <legend>Agendando próxima mentoria</legend>
                <div class="scheduling">
-                  <div>
-                     <label for="idate">Data</label>
+                  <div class="date">
+                     <label for="idate">Data <span>(DD/MM/AAAA)</span></label>
                      <input type="date" id="idate">
                   </div>
-                  <div>
-                     <label for="ibegin">Das <span>(DD/MM/AAAA)</span></label>
+                  <div class="hour">
+                     <label for="ibegin">Das</label>
                      <input type="time" id="ibegin">
                   </div>
-                  <div>
+                  <div class="hour">
                      <label for="iend">Até</label>
                      <input type="time" id="iend">
                   </div>
