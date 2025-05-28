@@ -1,40 +1,6 @@
-* {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-}
-
-:root {
-   font-size: 62.5%;
-   --white: #ffffff;
-   --decoration: #ed1848;
-   --background: #bfd7e4;
-   --header: #293241;
-   --title: #253B51;
-   --text: #4E4958;
-}
-
-body {
-   background-color: var(--background);
-   font-size: 1.4rem;
-   color: var(--text);
-}
-
-body::before {
-   content: '';
-   width: 100%;
-   height: 46.5rem;
-   position: absolute;
-   left: 0;
-   top: 0;
-   z-index: -1;
-
-   background-color: var(--header);
-}
-
-.page {
-   width: 75rem;
-   margin: auto;
+.container {
+  width: 75vw;
+  margin: auto;
 }
 
 
@@ -70,7 +36,7 @@ header h2 {
    font-size: 2.4rem;
    text-align: center;
    padding: 5rem 0;
-   width: 75rem;
+   width: 75vw;
    height: 13.3rem;
    border-radius: 2rem 2rem 0 0;
 }
@@ -258,11 +224,4 @@ h1, h2, legend {
 
 .button:hover {
    background-color: #b50b33;
-}
-
-footer {
-   padding: 1.5rem;
-   text-align: center;
-   font-size: 1rem;
-   color: var(--header);
 }
