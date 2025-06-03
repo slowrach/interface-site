@@ -1,30 +1,53 @@
 import "./App.css"
-import { Controller, useForm, type ControllerProps } from "react-hook-form"
+import { Controller, useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
 
 type FormData = {
    name: string
    lastName: string
    email: string
    mentor: string
-   feedback: string
-   date: string
-   start: string
-   end: string
-   check: boolean
+   feedback?: string
+   date?: string
+   start?: string
+   end?: string
+   check?: boolean
 }
 
+const schema = yup.object({
+   name: yup.string().required("Digite um nome"),
+   lastName: yup.string().required("Digite seu sobrenome"),
+   email: yup.string().email().required(),
+   mentor: yup.string().required(),
+   feedback: yup.string(),
+   date: yup.string(),
+   start: yup.string(),
+   end: yup.string(),
+   check: yup.boolean()
+})
+
 export function App() {
-   const { control, handleSubmit } = useForm<FormData>({ defaultValues: {
-      name: "",
-      lastName: "",
-      email: "",
-      mentor: "",
-      feedback: "",
-      date: "",
-      start: "",
-      end: "",
-      check: false
-   } })
+   const { control, handleSubmit, formState: { errors } } = useForm<FormData>({
+      defaultValues: {
+         name: "",
+         lastName: "",
+         email: "",
+         mentor: "",
+         feedback: "",
+         date: "",
+         start: "",
+         end: "",
+         check: false
+      },
+      resolver: yupResolver(schema),
+   })
+
+   const day = new Date().getDate().toString().padStart(2, "0")
+   const month = (new Date().getMonth() + 1).toString().padStart(2, "0")
+   const year = new Date().getFullYear()
+
+   const today = `${year}-${month}-${day}`
 
    function submit(data: FormData){
       console.log(data)
@@ -49,11 +72,15 @@ export function App() {
                   <h3>Nome</h3>
 
                   <Controller control={control} name="name" render={({ field }) => (<input type="text" {...field}/>)} />
+
+                  {errors.name?.message && <h4 className="error">Nome é obrigatório</h4>}
                </div>
                <div>
                   <h3>Sobrenome</h3>
                   
                   <Controller control={control} name="lastName" render={({ field }) => (<input type="text" {...field}/>)} />
+
+                  {errors.lastName?.message && <h4 className="error">Sobrenome é obrigatório</h4>}
                </div>
             </div>
 
@@ -61,6 +88,8 @@ export function App() {
                <h3>E-mail <span>(Digite um email válido)</span></h3>
 
                <Controller control={control} name="email" render={({ field }) => (<input type="email" {...field}/>)} />
+
+               {errors.email?.message && <h4 className="error">E-mail é obrigatório</h4>}
             </div>
          </fieldset>
             
@@ -72,6 +101,8 @@ export function App() {
 
                   <Controller control={control} name="mentor" render={({ field }) => (
                      <select {...field}>
+                        <option value="" disabled>...</option>
+
                         <option value=" Mark Knopfler">Mark Knopfler</option>
                         <option value="Eric Clapton">Eric Clapton</option>
                         <option value="Gary Moore">Gary Moore</option>
@@ -80,6 +111,8 @@ export function App() {
                         <option value="Stevie Ray Vaughan">Stevie Ray Vaughan</option>
                      </select>
                   )} />
+
+                  {errors.mentor?.message && <h4 className="error">Selecione o mentor</h4>}
                </div>
 
                <div className="mentor-feedback">
@@ -104,7 +137,7 @@ export function App() {
                <div className="date">
                   <h3>Data <span>(DD/MM/AAAA)</span></h3>
 
-                  <Controller control={control} name="date" render={({ field }) => (<input type="date" {...field}/>)} />
+                  <Controller control={control} name="date" render={({ field }) => (<input type="date" min={today}  {...field}/>)} />
                </div>
 
                <div className="hour">

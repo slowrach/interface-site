@@ -103,14 +103,13 @@ form span:hover {
 .email-data {
    display: flex;
    flex-direction: column;
-   margin-top: 1.6rem;
+   margin: 1.6rem 0 3.1rem;
 }
 
 .email-data input {
    font-size: 1.7rem;
    width: 62.2rem;
    height: 5.6rem;
-   margin-bottom: 3.1rem;
 }
 
 .mentor-name {
@@ -218,6 +217,12 @@ form span:hover {
 
 .button:hover {
    filter: brightness(0.7);
+}
+
+.error {
+   font-weight: 400;
+   margin-left: 1rem;
+   color: var(--decoration);
 }
 
 @media screen and (max-width: 426px) {
