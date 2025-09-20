@@ -2,6 +2,7 @@ import "./App.css"
 import { Controller, useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import headerImg from "./assets/icon-header.jpg"
 
 type FormData = {
    name: string
@@ -60,7 +61,7 @@ export function App() {
 
          <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
 
-         <img src="src/assets/icon-header.jpg" alt="imagem decorativa no cabeçalho"></img>
+         <img src={headerImg} alt="imagem decorativa no cabeçalho"></img>
 
          <h2>Informações pessoais</h2>
       </header>
